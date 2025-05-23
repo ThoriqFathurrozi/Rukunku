@@ -12,13 +12,14 @@ const InputForm = React.forwardRef(function InputForm(
     register,
     error,
     errorMessage,
+    isChangeable = true,
     ...props
   },
   ref
 ) {
   const errorStyle = "border-red-500 focus-visible:ring-red-500";
   return (
-    <div className="flex flex-col w-full py-2 gap-1">
+    <div className="flex flex-col w-full pt-2 gap-1">
       <Label htmlFor={id}>{label}</Label>
       <Input
         id={id}
@@ -28,6 +29,12 @@ const InputForm = React.forwardRef(function InputForm(
         {...(register || {})}
         {...props}
       />
+      {!isChangeable && (
+        <small className="text-sm text-gray-500 mt-1 block">
+          Double-check — this can’t be changed later.
+        </small>
+      )}
+
       {error && (
         <p className="mt-1 text-sm text-red-600" role="alert">
           {errorMessage || "This field is required."}

@@ -14,6 +14,7 @@ const SelectForm = React.forwardRef(function SelectForm(
     register,
     error,
     errorMessage,
+    isChangeable = true,
     defaultValue,
     value,
     ...props
@@ -28,7 +29,7 @@ const SelectForm = React.forwardRef(function SelectForm(
   );
 
   return (
-    <div className="flex flex-col w-full py-2">
+    <div className="flex flex-col w-full pt-2">
       {label && <Label htmlFor={id || name}>{label}</Label>}
       <select
         id={id || name}
@@ -52,6 +53,13 @@ const SelectForm = React.forwardRef(function SelectForm(
           </option>
         ))}
       </select>
+      {!isChangeable && (
+        <small class="text-sm text-gray-500 mt-1 block">
+          Double-check — this can’t be changed later.
+        </small>
+      )}
+
+      {/* Error message */}
       {error && (
         <p className="mt-1 text-sm text-red-600" role="alert">
           {errorMessage || "This field is required."}

@@ -37,11 +37,11 @@ class PaymentController extends Controller
         ]);
 
         $payment = Payment::create([
-            'foreign_category_id' => $request->category,
             'foreign_house_id' => $request->house_id,
             'foreign_resident_id' => $request->resident_id,
             'payment_date' => $request->payment_date,
             'total_payment' => $request->payment_total,
+            'foreign_category_id' => $request->category,
             'total_month' => $request->total_month,
             'description' => $request->description,
             'status' => $request->status,
@@ -61,10 +61,10 @@ class PaymentController extends Controller
         }
 
         $request->validate([
-            'house_id' => 'required|exists:houses,house_id',
-            'resident_id' => 'required|exists:residents,resident_id',
-            'category' => 'required|exists:categories,category_id',
+            // 'house_id' => 'required|exists:houses,house_id',
+            // 'resident_id' => 'required|exists:residents,resident_id',
             'payment_date' => 'required|date',
+            'category' => 'required|exists:categories,category_id',
             'payment_total' => 'required|numeric',
             'total_month' => 'required|numeric',
             'description' => 'required|string',

@@ -10,7 +10,7 @@ Rukunku is a full-featured web application built with **Laravel** (backend) and 
 
 ```bash
 git clone https://github.com/ThoriqFathurrozi/Rukunku.git
-cd backend
+cd Rukunku/backend
 ```
 
 ### 2. Install PHP Dependencies

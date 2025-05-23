@@ -39,9 +39,9 @@ DB_DATABASE=your_database_name
 DB_USERNAME=your_database_user
 DB_PASSWORD=your_database_password
 
-APP_URL=http://localhost:8000
+APP_URL=http://localhost:8000 #or specify url backend you running
 
-SANCTUM_STATEFUL_DOMAINS=localhost:5173,127.0.0.1:5173
+SANCTUM_STATEFUL_DOMAINS=localhost:5173,127.0.0.1:5173 #or specify base uri frontend you running
 SESSION_DOMAIN=localhost
 ```
 

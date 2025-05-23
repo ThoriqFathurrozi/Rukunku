@@ -43,6 +43,7 @@ APP_URL=http://localhost:8000 #or specify url backend you running
 
 SANCTUM_STATEFUL_DOMAINS=localhost:5173,127.0.0.1:5173 #or specify base uri frontend you running
 SESSION_DOMAIN=localhost
+SESSION_DRIVER=cookie
 ```
 
 Also update `config/cors.php` if needed:
@@ -64,16 +65,10 @@ php artisan key:generate
 ### 5. Run Migrations and Seeders
 
 ```bash
-php artisan migrate:fresh --seed
+php artisan migrate --seed
 ```
 
-### 6. Publish Sanctum Configuration (if not published)
-
-```bash
-php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"
-```
-
-### 7. Start Laravel Development Server
+### 6. Start Laravel Development Server
 
 ```bash
 php artisan serve

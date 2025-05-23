@@ -166,7 +166,7 @@ export default function CreatePayment() {
         <Button aria-label="Close modal" onClick={() => setIsOpen(false)}>
           &times;
         </Button>
-        <h1 className="text-lg">Add new resident</h1>
+        <h1 className="text-lg">Add new Payment</h1>
       </div>
       <div>
         <fetcher.Form method="post">

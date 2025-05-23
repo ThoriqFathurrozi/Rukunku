@@ -74,12 +74,12 @@ export default function EditResidentHouse({ row }) {
 
   return (
     <>
-      <Modal isOpen={isOpen} onChangeOpen={onClose} TrigerName="Edit House">
+      <Modal isOpen={isOpen} onChangeOpen={onClose} TrigerName="Edit Resident">
         <div className="flex flex-row-reverse justify-between items-center">
           <Button aria-label="Close modal" onClick={() => onClose()}>
             &times;
           </Button>
-          <h1 className="text-lg">Add new house</h1>
+          <h1 className="text-lg">Edit House Resident</h1>
         </div>
         <div>
           <form onSubmit={handleSubmit(onSubmit, onError)}>

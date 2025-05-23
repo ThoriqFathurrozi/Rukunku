@@ -72,7 +72,7 @@ export default function EditCategory({ row }) {
         <Button aria-label="Close modal" onClick={() => setIsOpen(false)}>
           &times;
         </Button>
-        <h1 className="text-lg">Add new resident</h1>
+        <h1 className="text-lg">Edit Category</h1>
       </div>
       <div>
         <form onSubmit={handleSubmit(onSubmit, onError)}>

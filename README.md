@@ -26,7 +26,11 @@ composer install
 ### 3. Configure Environment File
 
 ```bash
+#mac or linux
 cp .env.example .env
+
+#windows powershell or cmd
+Copy-Item -Path "env.example" -Destination ".env"
 ```
 
 Update `.env` with your local settings:
@@ -97,7 +101,11 @@ npm install
 ### 3. Configure Environment File
 
 ```bash
+#mac or linux
 cp .env.example .env
+
+#windows powershell or cmd
+Copy-Item -Path "env.example" -Destination ".env"
 ```
 
 Update `.env`:

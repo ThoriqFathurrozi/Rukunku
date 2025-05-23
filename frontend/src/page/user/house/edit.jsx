@@ -75,6 +75,7 @@ export default function Edit({ row }) {
           <InputForm
             name="address"
             id="address"
+            label="House Address"
             type="text"
             placeholder="House Address"
             register={register("address", { required: true })}

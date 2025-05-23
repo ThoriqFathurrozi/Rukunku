@@ -51,6 +51,7 @@ export default function CreateExpense() {
             required
           />
           <InputForm
+            required
             type="number"
             placeholder="Expense Total"
             name="expense_total"
@@ -58,6 +59,7 @@ export default function CreateExpense() {
             label="Expense Total"
           />
           <InputForm
+            required
             type="text"
             placeholder="Description"
             name="description"
@@ -65,6 +67,7 @@ export default function CreateExpense() {
             label="Description"
           />
           <SelectForm
+            required
             id="category"
             label="Category"
             name="category"

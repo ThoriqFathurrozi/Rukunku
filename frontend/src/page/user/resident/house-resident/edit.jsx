@@ -66,6 +66,9 @@ export default function EditHouseResident({ row }) {
       })();
 
     setValue("house_id", row.foreign_house_id);
+    setValue("resident_id", row.foreign_resident_id);
+    setValue("start_date", format(new Date(row.start_date), "yyyy-MM-dd"));
+    setValue("end_date", format(new Date(row.end_date), "yyyy-MM-dd"));
   }, [onClose, optionCreate, setValue, row]);
 
   return (

@@ -43,9 +43,16 @@ export default function EditPage({ row }) {
 
   const onSubmit = async (data) => {
     const formData = new FormData();
+
     Object.keys(data).forEach((key) => {
-      if (!(key == "identification_card_img" && data[key].length == 0))
+      if (key === "identification_card_img") {
+        const file = data[key]?.[0];
+        if (file) {
+          formData.append(key, file);
+        }
+      } else {
         formData.append(key, data[key]);
+      }
     });
 
     const res = await residents.update(formData, row.resident_id);
@@ -73,6 +80,8 @@ export default function EditPage({ row }) {
 
     setValue("maritial_status", row.maritial_status);
     setValue("resident_status", row.resident_status);
+    setValue("full_name", row.full_name);
+    setValue("phone_number", row.phone_number);
   }, [isOpen, onClose, optionCreate, setValue, row]);
 
   return (
@@ -82,7 +91,7 @@ export default function EditPage({ row }) {
           <Button aria-label="Close modal" onClick={() => onClose()}>
             &times;
           </Button>
-          <h1 className="text-lg">Add new resident</h1>
+          <h1 className="text-lg">Edit Resident</h1>
         </div>
         <div>
           <form onSubmit={handleSubmit(onSubmit, onError)}>

@@ -171,6 +171,7 @@ export default function CreatePayment() {
       <div>
         <fetcher.Form method="post">
           <SelectForm
+            required
             name="house_id"
             id="house_id"
             label="Payment House"
@@ -182,8 +183,11 @@ export default function CreatePayment() {
               label: value.number + " - " + value.address,
               value: value.house_id,
             }))}
+            isChangeable={false}
           />
+
           <SelectForm
+            required
             name="resident_id"
             id="resident_id"
             label="Resident Payment"
@@ -198,6 +202,7 @@ export default function CreatePayment() {
               label: value.full_name + " - " + value.resident_status,
               value: value.resident_id,
             }))}
+            isChangeable={false}
           />
           <InputForm
             id="payment_date"
@@ -205,15 +210,19 @@ export default function CreatePayment() {
             name="payment_date"
             label="Payment Date"
             required
+            isChangeable={false}
           />
           <InputForm
+            required
             id="payment_total"
             type="number"
             name="payment_total"
             label="Payment Total"
             placeholder="Payment Total"
+            isChangeable={false}
           />
           <InputForm
+            required
             id="total_month"
             type="number"
             name="total_month"
@@ -221,6 +230,7 @@ export default function CreatePayment() {
             placeholder="Total Month"
           />
           <InputForm
+            required
             id="description"
             type="text"
             name="description"
@@ -229,6 +239,7 @@ export default function CreatePayment() {
           />
 
           <SelectForm
+            required
             id="category"
             label="Category"
             name="category"
@@ -238,6 +249,7 @@ export default function CreatePayment() {
             }))}
           />
           <SelectForm
+            required
             name="status"
             id="status"
             className="w-full border px-4 py-2 rounded-lg"

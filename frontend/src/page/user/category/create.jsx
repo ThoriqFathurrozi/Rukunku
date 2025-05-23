@@ -57,9 +57,9 @@ export default function CreateCategory() {
             name="description"
             id="description"
             label="Category Description"
-            required
           />
           <SelectForm
+            required
             id="type"
             label="Category Type"
             name="type"

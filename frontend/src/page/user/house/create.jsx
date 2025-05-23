@@ -34,6 +34,7 @@ export function Create() {
       <div>
         <fetcher.Form method="post">
           <InputForm
+            required
             id="number"
             type="text"
             name="number"
@@ -41,8 +42,10 @@ export function Create() {
             placeholder="House Number"
           />
           <InputForm
+            required
             id="address"
             type="text"
+            label="House Address"
             name="address"
             placeholder="House Address"
           />

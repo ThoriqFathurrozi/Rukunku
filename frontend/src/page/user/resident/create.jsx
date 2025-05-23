@@ -56,12 +56,14 @@ const Create = () => {
         <div>
           <fetcher.Form method="post" encType="multipart/form-data">
             <InputForm
+              required
               label="Full Name"
               type="text"
               name="full_name"
               placeholder="Full Name"
             />
             <SelectForm
+              required
               name="maritial_status"
               label="Maritial Status"
               options={optionCreate.maritial_status.map((value) => ({
@@ -72,6 +74,7 @@ const Create = () => {
               onChangeSelect={(e) => setMartialStatus(e.target.value)}
             />
             <SelectForm
+              required
               name="resident_status"
               label="Resident Status"
               options={optionCreate.resident_status.map((value) => ({
@@ -82,6 +85,7 @@ const Create = () => {
               onChangeSelect={(e) => setResidentStatus(e.target.value)}
             />
             <InputForm
+              required
               label="Phone Number"
               type="text"
               name="phone_number"
@@ -89,6 +93,7 @@ const Create = () => {
             />
             <Label htmlFor="identification_card_img">Identification Card</Label>
             <Input
+              required
               type="file"
               name="identification_card_img"
               id="identification_card_img"
